@@ -1,2 +1,2 @@
 # Darki2020_methods
-Methods to access binocular rivalry with periodic stimuli
+Methods to assess binocular rivalry with periodic stimuli
