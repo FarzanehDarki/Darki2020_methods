@@ -1,0 +1,15 @@
+r = run('wilson_flicker', IRS=0, IPS=1, ICP=[8,11], sv='stimuli')
+hb = run('wilson_flicker', s='stimuli',IRS='HB1', ICP=[8,11], sv='stimuli_per')
+r = r + hb
+plot(r)
+
+r = run('wilson_flicker', s='stimuli_per', ICP=[9,11], sv='fa')
+bp = run('wilson_flicker', s='fa', IRS='BP1', ISW=-1, ICP=[9,11], sv='fabp')
+plot(r+bp)
+
+fw  = run('wilson_flicker', s='fa',NTST=300, sv='flicker_fw')
+fw2 = run('wilson_flicker', s='fabp', NTST=300, sv='flicker_fw2')
+bw2 = run('wilson_flicker', s='fabp', NTST=300, sv='flicker_bw2')
+r=fw+fw2+bw2
+plot(r)
+wait()

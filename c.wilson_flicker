@@ -1,0 +1,9 @@
+NDIM=   8, IPS =   2, IRS =   'UZ1', ILP =   1
+ICP =  [1,11]
+NTST=  20, NCOL=   4, IAD =   3, ISP =   2, ISW = 1, IPLT= 1, NBC= 0, NINT= 0
+NMX=  5000, NPR=  200, MXBF=  10, IID =   2, ITMX= 8, ITNW= 5, NWTN= 3, JAC= 0
+EPSL= 1e-06, EPSU = 1e-06, EPSS =1e-04
+DS  =   0.05, DSMIN= 0.01, DSMAX=  0.1, IADS= 1
+NPAR=  10, THL =  {}, THU =  {}
+UZSTOP={1:[0 16.0],8:[0 1.0], 9:[0 1.0]}
+
