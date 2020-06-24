@@ -1,0 +1,16 @@
+print "\n***Find initial conditions for ODEs***"
+r = run('wilson_trad', ICP=7, UZSTOP={7:[0.0, 1.0]}, sv='intial_condition')
+plot(r)
+
+#Find equillibriums
+print "\n***Find equillibrium for ODEs***"
+r = run('wilson_trad', ICP=1, s='intial_condition', IRS='UZ1', UZSTOP={1: [0.0, 16.0]}, sv='traditional')
+
+#Find limit cycles
+print "\n***Find limit cycles for ODEs***"
+hb1=run('wilson_trad',s='traditional', IRS='HB1', IPS=2, NTST=300, NMX=500)
+hb2=run('wilson_trad',s='traditional', IRS='HB2', IPS=2, NTST=300, NMX=150) 
+r = r + hb1 + hb2
+plot(r)
+wait()
+
